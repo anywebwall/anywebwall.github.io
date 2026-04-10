@@ -1,1 +1,392 @@
-<button>Subscribe</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AnyWebWall | Lightweight Live Wallpaper Engine For Low End PC</title>
+    <meta name="title" content="AnyWebWall | Lightweight C++ 3D Live Wallpaper Engine">
+    <meta name="description" content="Download AnyWebWall, a highly optimized C++ & OpenGL live wallpaper engine. Run interactive 2D/3D .aww wallpapers with minimal CPU and RAM usage.">
+    <meta name="keywords" content="AnyWebWall, live wallpaper app for pc, c++ wallpaper engine, low end pc live wallpaper, best live wallpaper engine free, 3d desktop background windows 10, windows 11 animated wallpaper, interactive wallpaper lightweight">
+    <meta name="author" content="BSR Studios">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://anywebwall.github.io/" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anywebwall.github.io/">
+    <meta property="og:title" content="AnyWebWall | Lightweight C++ 3D Live Wallpaper Engine">
+    <meta property="og:description" content="Run interactive 2D/3D .aww wallpapers efficiently with minimal CPU & RAM usage. Built with C++ and OpenGL.">
+    <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anywebwall.github.io/">
+    <meta property="twitter:title" content="AnyWebWall | Lightweight C++ 3D Live Wallpaper Engine">
+    <meta property="twitter:description" content="Run interactive 2D/3D .aww wallpapers efficiently with minimal CPU & RAM usage. Built with C++ and OpenGL.">
+    <meta property="twitter:image" content="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
+
+    <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AnyWebWall",
+      "operatingSystem": "Windows 7, Windows 10, Windows 11",
+      "applicationCategory": "DesktopEnhancementApplication",
+      "fileSize": "41.3 MB",
+      "author": {
+        "@type": "Organization",
+        "name": "BSR Studios",
+        "url": "https://bsr-studios.github.io/"
+      },
+      "image": "https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png",
+      "description": "A highly optimized native C++ and OpenGL live wallpaper engine for Windows. Renders interactive 2D/3D .aww files with extreme efficiency for low-end PCs.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BSR Studios",
+      "url": "https://bsr-studios.github.io/",
+      "logo": "https://bsr-studios.github.io/logo.png"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can it run smoothly on a system with just 2GB RAM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely! It runs as smooth as butter because it is built entirely in C++ and OpenGL. You can easily do normal work with it running."
+        }
+      },{
+        "@type": "Question",
+        "name": "Can I set a video (MP4) as a wallpaper using this app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, AnyWebWall is exclusively built to render 2D and 3D .aww files to ensure low resource usage. If you want to use video wallpapers, please download our dedicated video engine at AnyVidWall."
+        }
+      },{
+        "@type": "Question",
+        "name": "Does the wallpaper pause when playing games?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the engine automatically detects full-screen applications and pauses rendering to ensure you get maximum FPS during gaming."
+        }
+      }]
+    }
+    </script>
+
+    <style>
+        /* Premium Dark Theme */
+        :root {
+            --bg-color: #0f1115;
+            --surface: #181b21;
+            --surface-light: #22262f;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; overflow-x: hidden; }
+
+        /* Navigation (Unlocked & Un-stickied as requested) */
+        nav { display: flex; align-items: center; justify-content: space-between; padding: 15px 5%; background: rgba(15, 17, 21, 0.8); border-bottom: 1px solid var(--border); }
+        .nav-left { flex: 1; display: flex; align-items: center; }
+        .nav-left img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+        .nav-center { flex: 1; display: flex; justify-content: center; font-weight: 800; font-size: 1.3rem; color: var(--text-main); letter-spacing: -0.5px; }
+        .nav-right { flex: 1; display: flex; justify-content: flex-end; gap: 20px; }
+        .nav-right a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .nav-right a:hover { color: var(--text-main); }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Hero Section */
+        .hero { text-align: center; padding: 50px 0; }
+        .hero-badge { display: inline-block; background: rgba(16, 185, 129, 0.1); color: var(--accent); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(16, 185, 129, 0.2); }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px; }
+        
+        /* Download Area */
+        .download-card { background: linear-gradient(145deg, var(--surface), var(--bg-color)); border: 1px solid var(--border); border-radius: 24px; padding: 40px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: relative; }
+        .dl-app-logo { width: 90px; height: 90px; border-radius: 25%; object-fit: cover; margin: 0 auto 20px auto; display: block; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+        .btn-download { display: inline-block; background: var(--primary); color: white; padding: 18px 45px; border-radius: 12px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: all 0.2s; box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3); }
+        .btn-download:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4); }
+        .stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 25px; color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Sections */
+        section { margin-top: 60px; }
+        .sec-title { font-size: 2rem; font-weight: 700; margin-bottom: 25px; color: var(--text-main); display: flex; align-items: center; gap: 15px; }
+        .sec-title::before { content: ''; display: block; width: 8px; height: 30px; background: var(--primary); border-radius: 4px; }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 30px; }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        
+        .feature-list { list-style: none; }
+        .feature-list li { margin-bottom: 15px; padding-left: 30px; position: relative; color: var(--text-muted); }
+        .feature-list li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--primary); font-weight: bold; }
+        .feature-list strong { color: var(--text-main); }
+
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery img { width: 100%; height: auto; border-radius: 12px; cursor: zoom-in; transition: transform 0.2s; border: 1px solid var(--border); }
+        .gallery img:hover { transform: scale(1.02); border-color: var(--primary); }
+
+        .tab-box { background: var(--surface-light); padding: 20px; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid var(--primary); }
+        .tab-box h4 { color: var(--text-main); margin-bottom: 5px; font-size: 1.1rem; }
+        .tab-box p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .spec-table th, .spec-table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .spec-table th { color: var(--primary); width: 30%; }
+        .spec-table td { color: var(--text-muted); }
+
+        /* SEO Article Text Styling */
+        .seo-article h2 { font-size: 1.8rem; margin-bottom: 20px; color: white; }
+        .seo-article h3 { font-size: 1.3rem; margin: 25px 0 10px; color: var(--primary); }
+        .seo-article p { color: var(--text-muted); line-height: 1.8; margin-bottom: 15px; font-size: 1.05rem; }
+        .seo-article strong { color: var(--text-main); }
+
+        #lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: none; justify-content: center; align-items: center; z-index: 9999; cursor: zoom-out; }
+        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+
+        footer { border-top: 1px solid var(--border); padding: 40px 20px; text-align: center; margin-top: 80px; color: var(--text-muted); font-size: 0.95rem; }
+        .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; margin-bottom: 25px; }
+        .footer-nav a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .nav-center { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <a href="https://bsr-studios.github.io/">
+                <img src="https://bsr-studios.github.io/logo.png" alt="BSR Studios Logo" onerror="this.src='https://via.placeholder.com/38x38/181b21/fff?text=BSR'">
+            </a>
+        </div>
+        <div class="nav-center">
+            BSR Studios
+        </div>
+        <div class="nav-right">
+			<a href="info/contact/">Contact Us</a>
+		    <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="nav-btn">View GitHub</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <header class="hero">
+            <span class="hero-badge">v1.2.0 is out now!</span>
+            <h1>Dynamic Wallpapers<br>Lag-Free Gaming</h1>
+            <p>A native C++ and OpenGL live wallpaper engine built specifically for low-end PCs. Experience stunning 2D/3D wallpapers without compromising system performance.</p>
+            
+            <div class="download-card">
+                <img src="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png" alt="AnyWebWall Logo" class="dl-app-logo">
+                
+                <h2 style="margin-bottom: 20px; font-size: 1.6rem;">Download AnyWebWall</h2>
+                <a href="https://bsr-download-tracker.aryanmewadastudios.workers.dev/download/anywebwall" class="btn-download" onclick="triggerDownload()">Download for Windows</a>
+                
+                <div class="stats">
+                    <span id="downloadCount">🔥 Loading downloads...</span>
+                    <span>• Windows 7/10/11</span>
+                    <span style="color: #60a5fa; font-weight: 600;">• Size: 41.3 MB</span>
+                    <span>• 100% Free</span>
+                </div>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="sec-title">Engineered for Efficiency</h2>
+            <div class="card">
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Most live wallpaper apps rely on heavy web-engines (HTML/CSS/JS) that consume significant RAM and slow down your computer. <strong>AnyWebWall</strong> solves this problem by using pure C++ and OpenGL. Whether you are gaming or doing heavy productivity tasks, your PC stays fast and responsive.</p>
+                
+                <h3 style="margin-bottom: 15px; font-size: 1.2rem;">What's New in v1.2.0</h3>
+                <ul class="feature-list">
+                    <li><strong>Complete UI Overhaul:</strong> A brand new, tab-based modern user interface.</li>
+                    <li><strong>Optimized File Size:</strong> Reduced application size to a lean 41.3 MB.</li>
+                    <li><strong>Library System Added:</strong> Save and manage your recently used wallpapers with visual previews.</li>
+                    <li><strong>Addons Support:</strong> New infrastructure to support installable addons for advanced functionalities.</li>
+                    <li><strong>Upgraded Engine:</strong> Existing `.aww` files have been updated to be even more advanced and resource-efficient.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="sec-title">Interface Preview</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Click any image to enlarge.</p>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/800x450/22262f/f8fafc?text=Home+Tab+UI" alt="Home Screen UI" onclick="openLightbox(this.src)">
+                <img src="https://via.placeholder.com/800x450/22262f/f8fafc?text=Library+Tab+UI" alt="Library Interface" onclick="openLightbox(this.src)">
+				<img src="https://via.placeholder.com/800x450/22262f/f8fafc?text=Wallpaper+Settings" alt="Settings Options" onclick="openLightbox(this.src)">
+                <img src="https://via.placeholder.com/800x450/22262f/f8fafc?text=Matrix+Rain+Live" alt="Live Matrix Rain" onclick="openLightbox(this.src)">
+            </div>
+        </section>
+
+        <section id="guide">
+            <h2 class="sec-title">How to Use AnyWebWall</h2>
+            <div class="card">
+                <p style="color: var(--text-muted); margin-bottom: 20px;">After installing, click the desktop icon to open the app. On first launch, it automatically applies the default "Matrix Rain" wallpaper and opens the main dashboard, which includes the following tabs:</p>
+                <div class="tab-box">
+                    <h4>1. Home Tab</h4>
+                    <p>Apply custom `.aww` files, download new wallpapers from the web, or use the On/Off toggle to pause the engine and display a static fallback image.</p>
+                </div>
+                <div class="tab-box">
+                    <h4>2. Library Tab</h4>
+                    <p>View all your recently applied wallpapers with built-in previews. Add, select, apply, or download more seamlessly.</p>
+                </div>
+                <div class="tab-box">
+                    <h4>3. Settings Tab</h4>
+                    <p>Control the "Run on Startup" toggle. Manage dynamic wallpaper settings that change based on the active `.aww` file (e.g., colors, size, 3D rotation).</p>
+                </div>
+                <div class="tab-box">
+                    <h4>4. Addons & About</h4>
+                    <p>Install/uninstall advanced addons from the official site. Check app version details in the About section.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="sec-title">System Requirements</h2>
+            <div class="card">
+                <div class="grid-2">
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 1.1rem;">Minimum Specifications</h3>
+                        <table class="spec-table">
+                            <tr><th>OS</th><td>Windows 7, 10, or 11</td></tr>
+                            <tr><th>CPU</th><td>Dual Core Processor</td></tr>
+                            <tr><th>RAM</th><td>2 GB</td></tr>
+                            <tr><th>GPU</th><td>Intel HD Graphics (OpenGL support)</td></tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent); margin-bottom: 10px; font-size: 1.1rem;">Recommended Specifications</h3>
+                        <table class="spec-table">
+                            <tr><th>OS</th><td>Windows 10 or 11</td></tr>
+                            <tr><th>CPU</th><td>Modern Dual/Quad Core</td></tr>
+                            <tr><th>RAM</th><td>4 GB or more</td></tr>
+                            <tr><th>GPU</th><td>Dedicated GPU</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="sec-title">FAQ</h2>
+            <div class="card">
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: white; display: block; margin-bottom: 5px;">Q: Can it run smoothly on a system with just 2GB RAM?</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Yes, absolutely! It runs as smooth as butter. You can easily do normal work with it running. However, if you are performing extremely heavy tasks, we recommend pausing or closing the app.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: white; display: block; margin-bottom: 5px;">Q: Can I set a video (MP4) as a wallpaper using this app?</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">No, AnyWebWall is exclusively built to render 2D and 3D `.aww` files. If you want to use video wallpapers, please download our dedicated video engine at <a href="https://anyvidwall.github.io" target="_blank" style="color: var(--primary);">AnyVidWall</a>.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: white; display: block; margin-bottom: 5px;">Q: Does it launch automatically when I start my PC?</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Yes, you can enable the "Run on Startup" option directly from the Settings tab.</p>
+                </div>
+                <div>
+                    <strong style="color: white; display: block; margin-bottom: 5px;">Q: Does the wallpaper pause when playing games?</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Yes, the engine automatically detects full-screen applications and pauses rendering to ensure you get maximum FPS during gaming.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="sec-title">Why Choose AnyWebWall?</h2>
+            <div class="card seo-article">
+                <h2>The Best Lightweight Live Wallpaper Engine for Low-End PCs</h2>
+                <p>Finding a reliable <strong>live wallpaper engine for PC</strong> that doesn't consume all your RAM can be frustrating. Most popular engines use heavy web-based frameworks (HTML/CSS/JS) that slow down budget systems. <strong>AnyWebWall</strong> changes the game.</p>
+                
+                <h3>Pure C++ and OpenGL Performance</h3>
+                <p>Engineered entirely in native C++, AnyWebWall acts as an ultra-lightweight <strong>interactive 3D wallpaper app</strong>. By utilizing hardware-accelerated OpenGL, it renders high-quality <code>.aww</code> wallpaper files with minimal CPU and memory overhead. Whether you are gaming, coding, or browsing, your PC stays fast and responsive without annoying lag.</p>
+
+                <h3>Customize Windows with 2D and 3D Themes</h3>
+                <p>From the classic <strong>Matrix digital rain</strong> hacker background to fully interactive 3D rotating planets, AnyWebWall brings your desktop to life. It is designed to be the perfect, highly-optimized freeware alternative to heavy, paid wallpaper engines for Windows 10 and Windows 11 users.</p>
+
+                <h3>100% Free Desktop Customization</h3>
+                <p>Developed by BSR Studios, AnyWebWall provides premium desktop aesthetics completely free of charge. Enjoy features like an integrated wallpaper library, dynamic customization settings, smart game-pause detection, and startup automation without spending a dime.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="info/about/">About Us</a>
+            <a href="info/contact/">Contact Us</a>
+            <a href="info/privacy/">Privacy Policy</a>
+            <a href="info/terms/">Terms & Conditions</a>
+            <a href="info/disclaimer/">Disclaimer</a>
+            <a href="info/dmca/">DMCA Policy</a>
+        </div>
+        <p>© 2026 BSR Studios. All rights reserved.</p>
+    </footer>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Zoomed Screenshot">
+    </div>
+
+    <script>
+        // Zoom functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        // Live Download Counter
+        const TRACKER_API = 'https://bsr-download-tracker.aryanmewadastudios.workers.dev';
+        const appKey = 'anywebwall';
+        const countDisplay = document.getElementById('downloadCount');
+
+        async function fetchDownloadCount() {
+            try {
+                const response = await fetch(`${TRACKER_API}/count/${appKey}`);
+                const data = await response.json();
+                countDisplay.innerText = `🔥 Total Downloads: ${data.count.toLocaleString()}`;
+            } catch (err) {
+                console.error("Fetch Error:", err);
+                countDisplay.innerText = "🔥 Trusted by thousands of users";
+            }
+        }
+
+        function triggerDownload() {
+            countDisplay.innerText = "⏳ Initiating Download...";
+            setTimeout(fetchDownloadCount, 4000); 
+        }
+
+        window.addEventListener('DOMContentLoaded', fetchDownloadCount);
+    </script>
+</body>
+</html>
