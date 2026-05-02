@@ -14,7 +14,7 @@
     <link rel="canonical" href="https://anywebwall.github.io/wallpapers/" />
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://anywebwall.github.io/wallpaper/">
+    <meta property="og:url" content="https://anywebwall.github.io/wallpapers/">
     <meta property="og:title" content="Free .aww Live Wallpapers Collection - AnyWebWall">
     <meta property="og:description" content="Get the best lightweight live wallpapers: Matrix Rain, Hacker Window, and more. No lag, 100% free.">
     <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
@@ -27,7 +27,7 @@
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": "AnyWebWall Free .aww Wallpaper Gallery",
-      "url": "https://anywebwall.github.io/wallpaper/",
+      "url": "https://anywebwall.github.io/wallpapers/",
       "description": "The official repository for downloading free, zero-lag .aww interactive 3D wallpapers for AnyWebWall engine by BSR Studios.",
       "publisher": {
         "@type": "Organization",
@@ -51,7 +51,7 @@
             --accent: #10b981;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
 
@@ -59,7 +59,7 @@
         nav { 
             display: flex; align-items: center; justify-content: space-between;
             padding: 15px 5%; background: rgba(15, 17, 21, 0.8); 
-            border-bottom: 1px solid var(--border); position: relative; z-index: 100; 
+            border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); 
         }
         .nav-left { flex: 1; display: flex; align-items: center; }
         .nav-left img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
@@ -67,7 +67,7 @@
         .nav-right { flex: 1; display: flex; justify-content: flex-end; gap: 15px; align-items: center;}
         .nav-right a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
         .nav-right a:hover { color: var(--text-main); }
-        .btn-nav { background: rgba(79, 70, 229, 0.1); color: var(--primary) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600; border: 1px solid rgba(79, 70, 229, 0.2); }
+        .btn-nav { background: rgba(79, 70, 229, 0.1); color: var(--primary) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600; border: 1px solid rgba(79, 70, 229, 0.2); transition: all 0.3s;}
         .btn-nav:hover { background: var(--primary); color: white !important; }
 
         /* Page Header */
@@ -99,6 +99,10 @@
 
         .btn-view { display: block; text-align: center; background: rgba(255, 255, 255, 0.05); color: var(--text-main); padding: 12px; border-radius: 10px; font-weight: 600; transition: 0.3s; border: 1px solid var(--border); }
         .wall-card:hover .btn-view { background: var(--primary); border-color: var(--primary); }
+
+        /* AD WRAPPER STYLES */
+        .bsr-ad-wrapper { width: 100%; max-width: 800px; background: var(--surface-light); border: 1px solid var(--border); border-radius: 16px; padding: 15px; text-align: center; overflow: hidden; }
+        .ad-label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
 
         /* SEO Article Content */
         .seo-article { background: var(--surface); padding: 50px; border-radius: 20px; border: 1px solid var(--border); }
@@ -136,7 +140,7 @@
         <a href="https://bsr-studios.github.io" class="nav-center">BSR Studios</a>
         <div class="nav-right">
             <a href="#">Gallery</a>
-            <a href="../" class="btn-nav">Get Engine</a>
+            <a href="../#download-section" class="btn-nav">Get Engine</a>
         </div>
     </nav>
 
@@ -193,6 +197,13 @@
                     <span class="btn-view">View Details</span>
                 </div>
             </a>
+
+            <!-- NATIVE BANNER AD (Sandwiched between Gallery Cards) -->
+            <div class="bsr-ad-wrapper" style="grid-column: 1 / -1; margin: 10px auto;">
+                <span class="ad-label">Sponsored Content</span>
+                <script async="async" data-cfasync="false" src="https://pl29317058.profitablecpmratenetwork.com/e1daa8d8166151c7506acf2379224bb2/invoke.js"></script>
+                <div id="container-e1daa8d8166151c7506acf2379224bb2"></div>
+            </div>
 
             <a href="rubiks-cube/" class="wall-card">
                 <img src="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.gif" alt="Rubik's Cube Preview" class="wall-thumb" loading="lazy">
@@ -279,11 +290,26 @@
 
             <h3>How to Install and Apply</h3>
             <p>
-                Applying these themes is incredibly simple. First, ensure you have downloaded the <strong><a href="../" style="color: #4f46e5;">AnyWebWall Engine</a></strong> from our home page. Once installed, simply download any .aww file from this gallery. Open the AnyWebWall control panel, click on "Apply Custom Wallpaper", select the downloaded file, and watch your desktop transform instantly!
+                Applying these themes is incredibly simple. First, ensure you have downloaded the <strong><a href="../#download-section" style="color: #4f46e5;">AnyWebWall Engine</a></strong> from our home page. Once installed, simply download any .aww file from this gallery. Open the AnyWebWall control panel, click on "Apply Custom Wallpaper", select the downloaded file, and watch your desktop transform instantly!
             </p>
         </article>
 
     </main>
+
+    <!-- 728x90 DISPLAY BANNER (Placed cleanly above the Footer) -->
+    <div class="bsr-ad-wrapper" style="max-width: 760px; margin: 40px auto 0;">
+        <span class="ad-label">Advertisement</span>
+        <script>
+          atOptions = {
+            'key' : '27be509027bd04715338945b1d6171d4',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/27be509027bd04715338945b1d6171d4/invoke.js"></script>
+    </div>
 
     <footer>
         <div class="footer-nav">
