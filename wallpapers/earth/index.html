@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://anywebwall.github.io/wallpaper/earth/">
+    <meta property="og:url" content="https://anywebwall.github.io/wallpapers/earth/">
     <meta property="og:title" content="3D Interactive Earth Live Wallpaper - 0% CPU">
     <meta property="og:description" content="Rotate the Earth directly on your desktop with this lightweight 3D interactive wallpaper. 100% free.">
     <meta property="og:image" content="https://github.com/AryanMewada/AWW/raw/main/Earth.gif">
@@ -76,7 +76,7 @@
         nav { 
             display: flex; align-items: center; justify-content: space-between;
             padding: 15px 5%; background: rgba(15, 17, 21, 0.8); 
-            border-bottom: 1px solid var(--border); position: relative; z-index: 100; 
+            border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px);
         }
         .nav-left { flex: 1; display: flex; align-items: center; }
         .nav-left img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
@@ -84,7 +84,7 @@
         .nav-right { flex: 1; display: flex; justify-content: flex-end; gap: 15px; align-items: center;}
         .nav-right a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
         .nav-right a:hover { color: var(--text-main); }
-        .btn-nav { background: rgba(59, 130, 246, 0.1); color: var(--theme-accent) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600; border: 1px solid rgba(59, 130, 246, 0.2); }
+        .btn-nav { background: rgba(59, 130, 246, 0.1); color: var(--theme-accent) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600; border: 1px solid rgba(59, 130, 246, 0.2); transition: all 0.3s;}
         .btn-nav:hover { background: var(--theme-accent); color: white !important; }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; flex: 1; width: 100%; }
@@ -101,6 +101,10 @@
         .seo-paragraph h3 { font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; color: var(--theme-accent); }
         .seo-paragraph p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
         .seo-paragraph strong { color: white; }
+
+        /* AD WRAPPER STYLES */
+        .bsr-ad-wrapper { width: 100%; max-width: 800px; margin: 40px auto; background: var(--surface-light); border: 1px solid var(--border); border-radius: 16px; padding: 15px; text-align: center; overflow: hidden; }
+        .ad-label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
 
         /* LAYOUT (Download Zone) */
         .wallpaper-layout { 
@@ -188,7 +192,7 @@
         <a href="https://bsr-studios.github.io" class="nav-center">BSR Studios</a>
         <div class="nav-right">
             <a href="../">Gallery</a>
-            <a href="../../" class="btn-nav">Get Engine</a>
+            <a href="../../#download-section" class="btn-nav">Get Engine</a>
         </div>
     </nav>
 
@@ -222,7 +226,7 @@
 
             <h3>Step 1: Download the AnyWebWall Engine</h3>
             <p>
-                Because our 3D Earth is an actual 3D model and not a simple video file, you cannot use standard wallpaper apps. First, download the lightweight <strong><a href="../../index.html" style="color: var(--theme-accent); text-decoration: none;">AnyWebWall Engine</a></strong> from our site. It uses almost zero resources compared to popular alternatives.
+                Because our 3D Earth is an actual 3D model and not a simple video file, you cannot use standard wallpaper apps. First, download the lightweight <strong><a href="../../#download-section" style="color: var(--theme-accent); text-decoration: none;">AnyWebWall Engine</a></strong> from our site. It uses almost zero resources compared to popular alternatives.
             </p>
 
             <h3>Step 2: Get the 3D Earth Script</h3>
@@ -235,6 +239,13 @@
                 Launch AnyWebWall from your system tray, click "Add Wallpaper", and select the file you just downloaded. Instantly, a glowing, 3D Earth will appear on your desktop. You can now use your mouse to click, drag, and rotate the planet! The application features a <em>Smart Gaming Mode</em>, which automatically pauses the 3D rendering the exact moment you launch a full-screen game, ensuring peak performance.
             </p>
         </article>
+
+        <!-- NATIVE BANNER AD (Sandwiched before Download Zone) -->
+        <div class="bsr-ad-wrapper">
+            <span class="ad-label">Sponsored Content</span>
+            <script async="async" data-cfasync="false" src="https://pl29317058.profitablecpmratenetwork.com/e1daa8d8166151c7506acf2379224bb2/invoke.js"></script>
+            <div id="container-e1daa8d8166151c7506acf2379224bb2"></div>
+        </div>
 
         <div id="download-zone" class="wallpaper-layout">
             
@@ -263,7 +274,7 @@
                 <div class="engine-info">
                     <strong>ℹ️ Requires AnyWebWall Engine</strong>
                     This is an exclusive 3D wallpaper script. To apply this to your desktop, you will need to install our free wallpaper engine first.<br><br>
-                    <a href="../../index.html">Download Engine Here →</a>
+                    <a href="../../#download-section">Download Engine Here →</a>
                 </div>
             </div>
         </div>
@@ -296,6 +307,21 @@
         </section>
 
     </main>
+
+    <!-- 728x90 DISPLAY BANNER (Placed cleanly above the Footer) -->
+    <div class="bsr-ad-wrapper" style="max-width: 760px; margin: 40px auto 0;">
+        <span class="ad-label">Advertisement</span>
+        <script>
+          atOptions = {
+            'key' : '27be509027bd04715338945b1d6171d4',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/27be509027bd04715338945b1d6171d4/invoke.js"></script>
+    </div>
 
     <footer>
         <div class="footer-nav">
