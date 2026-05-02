@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="canonical" href="https://anywebwall.github.io/wallpaper/matrix-rain/" />
+    <link rel="canonical" href="https://anywebwall.github.io/wallpapers/matrix-rain/" />
 
     <title>Matrix Digital Rain Live Wallpaper | AnyWebWall Theme</title>
     
@@ -67,7 +67,7 @@
         nav { 
             display: flex; align-items: center; justify-content: space-between;
             padding: 15px 5%; background: rgba(15, 17, 21, 0.8); 
-            border-bottom: 1px solid var(--border); position: relative; z-index: 100; 
+            border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); 
         }
         .nav-left { flex: 1; display: flex; align-items: center; }
         .nav-left img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
@@ -92,14 +92,17 @@
         .seo-paragraph h3 { font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; color: var(--neon-accent); }
         .seo-paragraph p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
         .seo-paragraph strong { color: white; }
-        .seo-paragraph ul, .seo-paragraph ol { margin-bottom: 15px; padding-left: 20px; color: var(--text-muted); font-size: 1.05rem; }
-        .seo-paragraph li { margin-bottom: 10px; }
+
+        /* AD WRAPPER STYLES */
+        .bsr-ad-wrapper { width: 100%; max-width: 800px; margin: 40px auto; background: var(--surface-light); border: 1px solid var(--border); border-radius: 16px; padding: 15px; text-align: center; overflow: hidden; }
+        .ad-label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
 
         /* LAYOUT (Download Zone) */
         .wallpaper-layout { 
             display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; margin-bottom: 50px; 
             align-items: flex-start; justify-content: center;
             background: var(--surface-light); padding: 40px; border-radius: 20px; border: 1px solid var(--border);
+            scroll-margin-top: 100px;
         }
         
         /* PERFECT GALLERY STYLE CARD */
@@ -181,7 +184,7 @@
         <a href="https://bsr-studios.github.io" class="nav-center">BSR Studios</a>
         <div class="nav-right">
             <a href="../">Gallery</a>
-            <a href="../../" class="btn-nav">Get Engine</a>
+            <a href="../../#download-section" class="btn-nav">Get Engine</a>
         </div>
     </nav>
 
@@ -212,7 +215,7 @@
             
             <h3>Step 1: Get the Native Wallpaper Engine</h3>
             <p>
-                Because our Matrix Rain is a genuine C++ script and not a heavy video, you cannot use standard wallpaper apps. First, download our highly optimized <strong><a href="../../index.html" style="color: var(--neon-accent); text-decoration: none;">AnyWebWall Engine</a></strong>. It is 100% free and requires almost zero resources.
+                Because our Matrix Rain is a genuine C++ script and not a heavy video, you cannot use standard wallpaper apps. First, download our highly optimized <strong><a href="../../#download-section" style="color: var(--neon-accent); text-decoration: none;">AnyWebWall Engine</a></strong>. It is 100% free and requires almost zero resources.
             </p>
 
             <h3>Step 2: Download the Matrix .aww File</h3>
@@ -225,6 +228,13 @@
                 Open AnyWebWall from your taskbar, click "Add Wallpaper," and select your new file. Because it is rendered by your graphics card via OpenGL, you can right-click the engine to access real-time customization! Want red hacker code instead of green? Want it to fall faster? You can tweak it instantly to match your exact desktop theme.
             </p>
         </article>
+
+        <!-- NATIVE BANNER AD (Sandwiched before Download Zone) -->
+        <div class="bsr-ad-wrapper">
+            <span class="ad-label">Sponsored Content</span>
+            <script async="async" data-cfasync="false" src="https://pl29317058.profitablecpmratenetwork.com/e1daa8d8166151c7506acf2379224bb2/invoke.js"></script>
+            <div id="container-e1daa8d8166151c7506acf2379224bb2"></div>
+        </div>
 
         <div id="download-zone" class="wallpaper-layout">
             
@@ -253,7 +263,7 @@
                 <div class="engine-info">
                     <strong>ℹ️ Requires AnyWebWall Engine</strong>
                     This is an exclusive desktop wallpaper script. To apply this to your screen, you will need our free native wallpaper engine.<br><br>
-                    <a href="../../index.html">Download Engine Here →</a>
+                    <a href="../../#download-section">Download Engine Here →</a>
                 </div>
             </div>
         </div>
@@ -286,6 +296,21 @@
         </section>
 
     </main>
+
+    <!-- 728x90 DISPLAY BANNER (Placed cleanly above the Footer) -->
+    <div class="bsr-ad-wrapper" style="max-width: 760px; margin: 40px auto 0;">
+        <span class="ad-label">Advertisement</span>
+        <script>
+          atOptions = {
+            'key' : '27be509027bd04715338945b1d6171d4',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/27be509027bd04715338945b1d6171d4/invoke.js"></script>
+    </div>
 
     <footer>
         <div class="footer-nav">
