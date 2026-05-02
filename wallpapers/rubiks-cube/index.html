@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://anywebwall.github.io/wallpaper/rubiks-cube/">
+    <meta property="og:url" content="https://anywebwall.github.io/wallpapers/rubiks-cube/">
     <meta property="og:title" content="3D Rubik's Cube Live Wallpaper - 0% CPU Usage">
     <meta property="og:description" content="Make your desktop fully interactive with this lightweight 3D Rubik's Cube wallpaper. 100% free and optimized.">
     <meta property="og:image" content="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.gif">
@@ -67,7 +67,7 @@
         nav { 
             display: flex; align-items: center; justify-content: space-between;
             padding: 15px 5%; background: rgba(15, 17, 21, 0.8); 
-            border-bottom: 1px solid var(--border); position: relative; z-index: 100; 
+            border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); 
         }
         .nav-left { flex: 1; display: flex; align-items: center; }
         .nav-left img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
@@ -93,11 +93,16 @@
         .seo-paragraph p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
         .seo-paragraph strong { color: white; }
 
+        /* AD WRAPPER STYLES */
+        .bsr-ad-wrapper { width: 100%; max-width: 800px; margin: 40px auto; background: var(--surface-light); border: 1px solid var(--border); border-radius: 16px; padding: 15px; text-align: center; overflow: hidden; }
+        .ad-label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
+
         /* LAYOUT (Download Zone) */
         .wallpaper-layout { 
             display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; margin-bottom: 50px; 
             align-items: flex-start; justify-content: center;
             background: var(--surface-light); padding: 40px; border-radius: 20px; border: 1px solid var(--border);
+            scroll-margin-top: 100px;
         }
         
         /* PERFECT GALLERY STYLE CARD */
@@ -179,7 +184,7 @@
         <a href="https://bsr-studios.github.io" class="nav-center">BSR Studios</a>
         <div class="nav-right">
             <a href="../">Gallery</a>
-            <a href="../../" class="btn-nav">Get Engine</a>
+            <a href="../../#download-section" class="btn-nav">Get Engine</a>
         </div>
     </nav>
 
@@ -213,7 +218,7 @@
 
             <h3>Step 1: Download the Zero-Lag Engine</h3>
             <p>
-                To render real 3D objects instead of video files, you must use our proprietary <strong><a href="../../" style="color: var(--neon-accent); text-decoration: none;">AnyWebWall Engine</a></strong>. It is entirely free and uses hardware acceleration to ensure zero lag.
+                To render real 3D objects instead of video files, you must use our proprietary <strong><a href="../../#download-section" style="color: var(--neon-accent); text-decoration: none;">AnyWebWall Engine</a></strong>. It is entirely free and uses hardware acceleration to ensure zero lag.
             </p>
 
             <h3>Step 2: Get the Rubik's Cube Script</h3>
@@ -226,6 +231,13 @@
                 Open the AnyWebWall application from your taskbar, click "Add Wallpaper", and load the script you just downloaded. Because this is a native script, you can dive into the real-time customization menu by right-clicking the AnyWebWall icon. You can manually adjust the size, scale, background color, and rotation speed of the cube according to your personal preference!
             </p>
         </article>
+
+        <!-- NATIVE BANNER AD (Sandwiched before Download Zone) -->
+        <div class="bsr-ad-wrapper">
+            <span class="ad-label">Sponsored Content</span>
+            <script async="async" data-cfasync="false" src="https://pl29317058.profitablecpmratenetwork.com/e1daa8d8166151c7506acf2379224bb2/invoke.js"></script>
+            <div id="container-e1daa8d8166151c7506acf2379224bb2"></div>
+        </div>
 
         <div id="download-zone" class="wallpaper-layout">
             
@@ -254,7 +266,7 @@
                 <div class="engine-info">
                     <strong>ℹ️ Requires AnyWebWall Engine</strong>
                     This is an exclusive wallpaper script. To apply this to your desktop, you will need our free wallpaper engine. It will not work without it.<br><br>
-                    <a href="../../">Download Engine Here →</a>
+                    <a href="../../#download-section">Download Engine Here →</a>
                 </div>
             </div>
         </div>
@@ -287,6 +299,21 @@
         </section>
 
     </main>
+
+    <!-- 728x90 DISPLAY BANNER (Placed cleanly above the Footer) -->
+    <div class="bsr-ad-wrapper" style="max-width: 760px; margin: 40px auto 0;">
+        <span class="ad-label">Advertisement</span>
+        <script>
+          atOptions = {
+            'key' : '27be509027bd04715338945b1d6171d4',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/27be509027bd04715338945b1d6171d4/invoke.js"></script>
+    </div>
 
     <footer>
         <div class="footer-nav">
