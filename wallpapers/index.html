@@ -55,7 +55,7 @@
         
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
 
-        /* Navigation */
+        /* Unified Navigation */
         nav { 
             display: flex; align-items: center; justify-content: space-between;
             padding: 15px 5%; background: rgba(15, 17, 21, 0.8); 
@@ -198,11 +198,10 @@
                 </div>
             </a>
 
-            <!-- NATIVE BANNER AD (Sandwiched between Gallery Cards) -->
+            <!-- NATIVE BANNER AD dynamically loaded from root file -->
             <div class="bsr-ad-wrapper" style="grid-column: 1 / -1; margin: 10px auto;">
                 <span class="ad-label">Sponsored Content</span>
-                <script async="async" data-cfasync="false" src="https://pl29317058.profitablecpmratenetwork.com/e1daa8d8166151c7506acf2379224bb2/invoke.js"></script>
-                <div id="container-e1daa8d8166151c7506acf2379224bb2"></div>
+                <script src="../nativebanner.js"></script>
             </div>
 
             <a href="rubiks-cube/" class="wall-card">
@@ -296,19 +295,10 @@
 
     </main>
 
-    <!-- 728x90 DISPLAY BANNER (Placed cleanly above the Footer) -->
+    <!-- 728x90 DISPLAY BANNER dynamically loaded from root file -->
     <div class="bsr-ad-wrapper" style="max-width: 760px; margin: 40px auto 0;">
         <span class="ad-label">Advertisement</span>
-        <script>
-          atOptions = {
-            'key' : '27be509027bd04715338945b1d6171d4',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        </script>
-        <script src="https://www.highperformanceformat.com/27be509027bd04715338945b1d6171d4/invoke.js"></script>
+        <script src="../banner.js"></script>
     </div>
 
     <footer>
