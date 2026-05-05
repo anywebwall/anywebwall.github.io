@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://anywebwall.github.io/wallpapers/infinite-zoom/" />
+
+    <title>Infinite Zoom Interactive Live Wallpaper | AnyWebWall</title>
+    
+    <meta name="description" content="Download the mesmerizing Infinite Zoom interactive live wallpaper. Experience a seamless 46-image endless zoom loop, highly optimized for Windows PC.">
+    <meta name="keywords" content="infinite zoom wallpaper, zoomquilt live wallpaper, endless zoom background, picture in picture zoom, interactive desktop wallpaper, AnyWebWall abstract theme, download .aww files, pc live wallpaper, optimized animated background">
+    <meta name="author" content="BSR Studios">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anywebwall.github.io/wallpapers/infinite-zoom/">
+    <meta property="og:title" content="Infinite Zoom Live Wallpaper - Seamless Endless Journey">
+    <meta property="og:description" content="Experience a mind-bending, glitch-free endless zoom on your desktop. Highly optimized for smooth performance.">
+    <meta property="og:image" content="https://github.com/AryanMewada/AWW/raw/main/Infinite%20Zoom.gif">
+    
+    <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Infinite Zoom Interactive Wallpaper",
+      "operatingSystem": "Windows 10, Windows 11",
+      "applicationCategory": "DesktopEnhancementApplication",
+      "description": "An interactive, glitch-free endless zoom dynamic desktop wallpaper designed specifically for the AnyWebWall engine. Inspired by Zoomquilt.",
+      "author": {
+        "@type": "Organization",
+        "name": "BSR Studios",
+        "url": "https://bsr-studios.github.io/"
+      },
+      "image": "https://github.com/AryanMewada/AWW/raw/main/Infinite%20Zoom.gif",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <style>
+        /* Premium Dark Theme */
+        :root {
+            --bg-color: #0f1115;
+            --surface: #181b21;
+            --surface-light: #22262f;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #10b981;
+            --neon-accent: #a855f7; /* Purple accent for abstract vibe */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
+
+        /* Navigation */
+        nav { 
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 15px 5%; background: rgba(15, 17, 21, 0.8); 
+            border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px);
+        }
+        .nav-left { flex: 1; display: flex; align-items: center; }
+        .nav-left img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+        .nav-center { flex: 1; display: flex; justify-content: center; font-weight: 800; font-size: 1.3rem; color: var(--text-main); letter-spacing: -0.5px; text-decoration: none;}
+        .nav-right { flex: 1; display: flex; justify-content: flex-end; gap: 15px; align-items: center;}
+        .nav-right a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .nav-right a:hover { color: var(--text-main); }
+        .btn-nav { background: rgba(79, 70, 229, 0.1); color: var(--primary) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600; border: 1px solid rgba(79, 70, 229, 0.2); transition: all 0.3s;}
+        .btn-nav:hover { background: var(--primary); color: white !important; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; flex: 1; width: 100%; }
+
+        /* HEADER / SCROLL TEXT */
+        .page-header { text-align: center; margin-bottom: 50px; padding: 20px 0; }
+        .page-header h1 { font-size: 2.8rem; font-weight: 800; color: white; margin-bottom: 15px; line-height: 1.2; background: linear-gradient(to right, #fff, var(--neon-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .scroll-text { display: inline-block; color: var(--text-muted); font-size: 0.95rem; font-weight: 500; padding: 10px 25px; border-radius: 50px; background: var(--surface-light); border: 1px solid var(--border); }
+
+        /* SEO Article Box */
+        .seo-paragraph { background: var(--surface); padding: 40px; border-radius: 20px; border: 1px solid var(--border); margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .seo-paragraph h2 { font-size: 1.8rem; margin-bottom: 20px; color: white; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .seo-paragraph h3 { font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; color: var(--neon-accent); }
+        .seo-paragraph p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
+        .seo-paragraph strong { color: white; }
+
+        /* General Broad SEO Article (Bottom) */
+        .broad-seo-article { background: linear-gradient(to bottom right, var(--surface), var(--surface-light)); padding: 50px; border-radius: 20px; border: 1px solid rgba(79, 70, 229, 0.3); margin-top: 50px; margin-bottom: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+        .broad-seo-article h2 { font-size: 2rem; margin-bottom: 25px; color: white; }
+        .broad-seo-article h3 { font-size: 1.4rem; margin-top: 35px; margin-bottom: 15px; color: var(--primary); }
+        .broad-seo-article p { color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; }
+        .broad-seo-article ul { margin-left: 20px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;}
+        .broad-seo-article li { margin-bottom: 10px; }
+
+        /* Credits Box */
+        .credits-box { background: rgba(168, 85, 247, 0.1); border-left: 4px solid var(--neon-accent); padding: 15px 20px; border-radius: 0 12px 12px 0; margin-top: 20px; margin-bottom: 20px; }
+        .credits-box p { margin: 0; color: #e9d5ff; font-size: 0.95rem; }
+        .credits-box a { color: var(--neon-accent); font-weight: bold; text-decoration: none; }
+        .credits-box a:hover { text-decoration: underline; }
+
+        /* AD WRAPPER STYLES */
+        .bsr-ad-wrapper { width: 100%; max-width: 800px; margin: 40px auto; background: var(--surface-light); border: 1px solid var(--border); border-radius: 16px; padding: 15px; text-align: center; overflow: hidden; }
+        .ad-label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
+
+        /* LAYOUT (Download Zone) */
+        .wallpaper-layout { 
+            display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; margin-bottom: 50px; 
+            align-items: flex-start; justify-content: center;
+            background: var(--surface-light); padding: 40px; border-radius: 20px; border: 1px solid var(--border);
+        }
+        
+        /* PERFECT GALLERY STYLE CARD */
+        .main-gif-card { 
+            width: 100%; max-width: 400px; 
+            background: var(--surface); 
+            border-radius: 16px; 
+            overflow: hidden; 
+            border: 1px solid var(--border); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .main-gif-card img { 
+            width: 100%; height: 240px; 
+            background-color: #0b1120;
+            object-fit: cover; 
+            display: block; 
+            border-bottom: 1px solid var(--border); 
+        }
+        .main-gif-info { padding: 25px; text-align: center; }
+        .main-gif-info h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px; }
+        .main-gif-info p { color: var(--neon-accent); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+        
+        /* WALLPAPER DETAILS (Right Side) */
+        .wallpaper-details { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: flex-start; }
+        
+        .specs-list { list-style: none; margin-bottom: 30px; background: rgba(0,0,0,0.2); padding: 25px; border-radius: 16px; border: 1px solid var(--border);}
+        .specs-list li { margin-bottom: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 10px; font-size: 1rem; }
+        .specs-list li:last-child { margin-bottom: 0; }
+        .specs-list li strong { color: white; min-width: 120px; }
+
+        .btn-icon { width: 20px; height: 20px; margin-right: 8px; filter: brightness(0) invert(1); }
+
+        .download-container { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.15rem; font-weight: 700; padding: 18px 40px; border-radius: 12px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3); width: 100%; }
+        .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4); }
+        .download-stats { font-size: 0.95rem; color: var(--text-muted); font-weight: 500; }
+        .download-stats span { color: var(--primary); font-weight: 700; }
+
+        .engine-info { 
+            padding: 20px; border-radius: 12px; 
+            background: rgba(79, 70, 229, 0.05); border: 1px solid rgba(79, 70, 229, 0.2); 
+            color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;
+            text-align: center;
+        }
+        .engine-info strong { color: white; font-size: 1.05rem; display: block; margin-bottom: 8px; }
+        .engine-info a { color: var(--primary); text-decoration: none; font-weight: 600; transition: 0.2s;}
+        .engine-info a:hover { text-decoration: underline; }
+
+        .recommended-section { margin-top: 60px; }
+        .recommended-section h3 { font-size: 1.6rem; margin-bottom: 25px; color: white; display: flex; align-items: center; gap: 10px; }
+        .recommended-section h3::before { content: ''; display: block; width: 6px; height: 24px; background: var(--primary); border-radius: 4px; }
+        
+        .rec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .rec-card { background: var(--surface); border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s; border: 1px solid var(--border); }
+        .rec-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .rec-card img { width: 100%; height: 150px; object-fit: cover; border-bottom: 1px solid var(--border); }
+        .rec-info { padding: 20px; }
+        .rec-info h4 { color: white; margin-bottom: 5px; font-size: 1.15rem; font-weight: 600; }
+        .rec-info p { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+
+        footer { border-top: 1px solid var(--border); padding: 40px 20px; text-align: center; margin-top: auto; color: var(--text-muted); font-size: 0.95rem; }
+        .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; margin-bottom: 25px; }
+        .footer-nav a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .footer-nav a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .nav-center { display: none; }
+            .page-header h1 { font-size: 2.2rem; }
+            .seo-paragraph, .broad-seo-article, .wallpaper-layout { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main Navigation">
+        <div class="nav-left">
+            <a href="https://bsr-studios.github.io">
+                <img src="https://bsr-studios.github.io/logo.png" alt="BSR Studios Logo" onerror="this.src='https://via.placeholder.com/38x38/181b21/fff?text=BSR'">
+            </a>
+        </div>
+        <a href="../../index.html" class="nav-center">BSR Studios</a>
+        <div class="nav-right">
+            <a href="../">Gallery</a>
+            <a href="../../#download-section" class="btn-nav">Get Engine</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <div class="page-header">
+            <h1>Infinite Zoom Interactive Wallpaper</h1>
+            <span class="scroll-text">Explore the details below and download the interactive script.</span>
+        </div>
+
+        <article class="seo-paragraph">
+            <h2>Experience a Seamless Picture-in-Picture Journey</h2>
+            <p>
+                Prepare to mesmerize your desktop with the <strong>Infinite Zoom Interactive Live Wallpaper</strong>. Unlike standard looping video backgrounds that abruptly cut or restart, this exclusive <strong>.aww format file</strong> relies on precise rendering to create an unbroken optical illusion. It is meticulously crafted from a sequence of <strong>46 distinct images</strong> that seamlessly scale and transition into one another. 
+            </p>
+            <p>
+                The visual effect mimics a flawless picture-in-picture depth dive. As the camera continuously pushes forward, a new image elegantly reveals itself from within the center of the previous one, creating a truly endless zoom without a single glitch, stutter, or visible seam.
+            </p>
+            
+            <div class="credits-box">
+                <p><strong>🌟 Inspiration & Credits:</strong> This immersive experience is heavily inspired by the legendary <a href="https://zoomquilt.org/" target="_blank">Zoomquilt</a> project. A huge shoutout and special thanks to their creators and talented artists for pioneering the original endless-zoom concept!</p>
+            </div>
+
+            <h3>Highly Optimized Professional Performance</h3>
+            <p>
+                Rendering a complex, 46-layer visual transition smoothly would normally put a heavy strain on system resources. At <strong>BSR Studios</strong>, we focus on genuine optimization rather than exaggerated metrics. By exclusively utilizing the AnyWebWall native <strong>C++ and OpenGL engine</strong>, this dynamic scene is hardware-accelerated directly through your GPU.
+            </p>
+            <p>
+                The result is a wallpaper with a <strong>minimal resource footprint</strong>. It operates efficiently in the background, ensuring that your computer remains highly responsive for productivity tasks and competitive gaming. Furthermore, the engine's smart-detection feature automatically pauses the rendering whenever you launch a full-screen application, completely freeing up your hardware limits.
+            </p>
+        </article>
+
+        <!-- NATIVE BANNER AD dynamically loaded from root file -->
+        <div class="bsr-ad-wrapper">
+            <span class="ad-label">Sponsored Content</span>
+            <script src="../../nativebanner.js"></script>
+        </div>
+
+        <div id="download-zone" class="wallpaper-layout">
+            
+            <div class="main-gif-card">
+                <img src="https://github.com/AryanMewada/AWW/raw/main/Infinite%20Zoom.gif" alt="Infinite Zoom Seamless Loop Preview">
+                <div class="main-gif-info">
+                    <h2>Infinite Zoom Loop</h2>
+                    <p>Abstract / Optical Illusion</p>
+                </div>
+            </div>
+            
+            <div class="wallpaper-details">
+                <ul class="specs-list">
+                    <li><strong>File Type:</strong> .aww (Interactive Script)</li>
+                    <li><strong>Content:</strong> 46-Image Seamless Sequence</li>
+                    <li><strong>Performance:</strong> Highly Optimized (Minimal Impact)</li>
+                    <li><strong>Theme:</strong> Picture-in-Picture Depth Dive</li>
+                    <li><strong>Credits:</strong> Inspired by Zoomquilt</li>
+                </ul>
+                
+                <div class="download-container">
+                    <a href="https://github.com/AryanMewada/AWW/raw/main/infinite_zoom.aww" id="downloadBtn" class="btn-download">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download .aww File
+                    </a>
+                    <p class="download-stats">Total Downloads: <span id="downloadCount">...</span></p>
+                </div>
+                
+                <div class="engine-info">
+                    <strong>ℹ️ Requires AnyWebWall Engine</strong>
+                    This is a highly optimized interactive script. To apply this to your desktop, you will need to install our native wallpaper engine first.<br><br>
+                    <a href="../../#download-section">Download Engine Here →</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="recommended-section">
+            <h3>Recommended Wallpapers</h3>
+            <div class="rec-grid">
+                <a href="../hacker-window/" class="rec-card" aria-label="View Hacker Window Wallpaper">
+                    <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" alt="Hacker Window Live Wallpaper">
+                    <div class="rec-info">
+                        <h4>Hacker Window</h4>
+                        <p>Cyberpunk / Tech</p>
+                    </div>
+                </a>
+                <a href="../cursor-trail/" class="rec-card" aria-label="View Cursor Trail Wallpaper">
+                    <img src="https://github.com/AryanMewada/AWW/raw/main/Curser%20Trail.gif" alt="Cursor Trail Live Wallpaper">
+                    <div class="rec-info">
+                        <h4>Interactive Cursor Trail</h4>
+                        <p>Interactive / Mouse Tracking</p>
+                    </div>
+                </a>
+                <a href="../earth/" class="rec-card" aria-label="View 3D Earth Wallpaper">
+                    <img src="https://github.com/AryanMewada/AWW/raw/main/Earth.gif" alt="3D Earth">
+                    <div class="rec-info">
+                        <h4>3D Interactive Earth</h4>
+                        <p>Planet / 3D Model</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 728x90 DISPLAY BANNER dynamically loaded from root file -->
+        <div class="bsr-ad-wrapper" style="max-width: 760px; margin: 40px auto 0;">
+            <span class="ad-label">Advertisement</span>
+            <script src="../../banner.js"></script>
+        </div>
+
+        <!-- NEW BROAD SEO ARTICLE (For General "Live Wallpaper" Traffic) -->
+        <article class="broad-seo-article">
+            <h2>The Ultimate Guide to Live Wallpapers for PC</h2>
+            <p>
+                Personalizing your digital workspace is more important than ever. If you spend hours on your computer, a static image simply doesn't cut it anymore. Users across the globe are constantly searching for the best <strong>live wallpapers for Windows 10 and Windows 11</strong> to breathe life into their screens. Whether you are looking for an animated desktop background, interactive 3D elements, or a sleek audio-responsive theme, setting up a moving wallpaper is the ultimate way to upgrade your PC's aesthetics.
+            </p>
+
+            <h3>Why Move to Animated Backgrounds?</h3>
+            <p>
+                A well-chosen animated background does more than just look good; it sets the mood for your entire workflow. Gamers often prefer high-energy cyberpunk cityscapes or glowing neon designs, while professionals might lean towards calm, seamless loops of nature or abstract geometry. By utilizing an engine like AnyWebWall, you gain access to a library of `.aww` files that are specifically formatted to run natively, meaning you get the visual upgrade without sacrificing your computer's speed.
+            </p>
+
+            <h3>How to Ensure Your PC Stays Fast</h3>
+            <p>
+                A common misconception is that live wallpapers for PC will inherently slow down your system. While older, heavy web-based engines (HTML/Video decoding) do consume massive amounts of RAM, modern native software changes the game entirely. Here is what to look for when customizing your desktop:
+            </p>
+            <ul>
+                <li><strong>Hardware Acceleration:</strong> Ensure the wallpaper engine uses OpenGL or DirectX so that the GPU handles the visuals, leaving your CPU entirely free.</li>
+                <li><strong>Smart Pausing:</strong> The best engines automatically detect when you launch a game or maximize a window (like a web browser or video editor) and pause the animation immediately.</li>
+                <li><strong>Format Matters:</strong> Instead of heavy `.mp4` video loops, lightweight script-based formats (like our interactive `.aww` files) provide much deeper customization with a fraction of the system impact.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../../info/about/">About Us</a>
+            <a href="../../info/contact/">Contact Us</a>
+            <a href="../../info/privacy/">Privacy Policy</a>
+            <a href="../../info/terms/">Terms & Conditions</a>
+            <a href="../../info/disclaimer/">Disclaimer</a>
+            <a href="../../info/dmca/">DMCA Policy</a>
+        </div>
+        <p>© 2026 BSR Studios. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const apiBase = "https://bsr-aww-tracker.aryanmewadastudios.workers.dev";
+            // NEW TRACKER UNIT FOR INFINITE ZOOM
+            const fileId = "infinite_zoom"; 
+            const countDisplay = document.getElementById("downloadCount");
+            const downloadBtn = document.getElementById("downloadBtn");
+            const originalBtnHtml = downloadBtn.innerHTML;
+
+            // 1. Fetch current count on page load
+            fetch(`${apiBase}/count/${fileId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.downloads !== undefined) {
+                        countDisplay.innerText = data.downloads.toLocaleString();
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching download count:", error);
+                    countDisplay.innerText = "N/A";
+                });
+
+            // 2. Increase count when button is clicked
+            downloadBtn.addEventListener("click", (e) => {
+                const href = downloadBtn.getAttribute("href");
+                
+                // Visual feedback during processing
+                downloadBtn.innerHTML = "Processing...";
+                downloadBtn.style.opacity = "0.8";
+                downloadBtn.style.pointerEvents = "none";
+
+                fetch(`${apiBase}/download/${fileId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success && data.downloads) {
+                            countDisplay.innerText = data.downloads.toLocaleString();
+                        }
+                    })
+                    .finally(() => {
+                        // Restore button state after a delay
+                        setTimeout(() => {
+                            downloadBtn.innerHTML = originalBtnHtml;
+                            downloadBtn.style.opacity = "1";
+                            downloadBtn.style.pointerEvents = "auto";
+                        }, 3000);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
