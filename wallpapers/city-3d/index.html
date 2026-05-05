@@ -130,14 +130,18 @@
             border: 1px solid var(--border); 
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .main-gif-card img { 
-            /* Frontend visual keeps using the GIF */
-            width: 100%; height: 240px; 
+        
+        /* CSS TO PREVENT CROPPING FOR VIDEOS */
+        .main-gif-card video { 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 16 / 9;
             background-color: #0b1120;
-            object-fit: cover; 
+            object-fit: contain; 
             display: block; 
             border-bottom: 1px solid var(--border); 
         }
+
         .main-gif-info { padding: 25px; text-align: center; }
         .main-gif-info h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px; }
         .main-gif-info p { color: var(--neon-accent); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
@@ -175,7 +179,10 @@
         .rec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
         .rec-card { background: var(--surface); border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s; border: 1px solid var(--border); }
         .rec-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-        .rec-card img { width: 100%; height: 150px; object-fit: cover; border-bottom: 1px solid var(--border); }
+        
+        /* CSS Updated to support BOTH img and video tags in Recommended Section */
+        .rec-card img, .rec-card video { width: 100%; height: 150px; object-fit: cover; border-bottom: 1px solid var(--border); display: block; background-color: #0b1120; }
+        
         .rec-info { padding: 20px; }
         .rec-info h4 { color: white; margin-bottom: 5px; font-size: 1.15rem; font-weight: 600; }
         .rec-info p { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
@@ -243,6 +250,7 @@
         <div id="download-zone" class="wallpaper-layout">
             
             <div class="main-gif-card">
+                <!-- Using Video Tag with GitHub RAW URL to prevent cropping -->
                 <video autoplay loop muted playsinline>
                     <source src="https://github.com/AryanMewada/AWW/raw/main/city_3d.mp4" type="video/mp4">
                 </video>
@@ -262,6 +270,7 @@
                 </ul>
                 
                 <div class="download-container">
+                    <!-- Download link using GitHub RAW URL -->
                     <a href="https://github.com/AryanMewada/AWW/raw/main/city_3d.aww" id="downloadBtn" class="btn-download">
                         <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         Download .aww File
@@ -280,13 +289,30 @@
         <section class="recommended-section">
             <h3>Recommended Wallpapers</h3>
             <div class="rec-grid">
+                
+                <!-- Infinite Zoom (Updated to Video Tag) -->
                 <a href="../infinite-zoom/" class="rec-card" aria-label="View Infinite Zoom Wallpaper">
-                    <img src="https://github.com/AryanMewada/AWW/raw/main/Infinite%20Zoom.gif" alt="Infinite Zoom Live Wallpaper">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://github.com/AryanMewada/AWW/raw/main/infinite-zoom.mp4" type="video/mp4">
+                    </video>
                     <div class="rec-info">
                         <h4>Infinite Zoom Loop</h4>
                         <p>Abstract / Optical Illusion</p>
                     </div>
                 </a>
+                
+                <!-- Parallax 3D (Updated to Video Tag) -->
+                <a href="../parallax-3d/" class="rec-card" aria-label="View Parallax 3D Wallpaper">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://github.com/AryanMewada/AWW/raw/main/Parallax-3D.mp4" type="video/mp4">
+                    </video>
+                    <div class="rec-info">
+                        <h4>Parallax 3D Ocean</h4>
+                        <p>Interactive / Nature Depth</p>
+                    </div>
+                </a>
+                
+                <!-- Hacker Window (Still GIF as MP4 link wasn't provided yet) -->
                 <a href="../hacker-window/" class="rec-card" aria-label="View Hacker Window Wallpaper">
                     <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" alt="Hacker Window Live Wallpaper">
                     <div class="rec-info">
@@ -294,13 +320,7 @@
                         <p>Cyberpunk / Tech</p>
                     </div>
                 </a>
-                <a href="../earth/" class="rec-card" aria-label="View 3D Earth Wallpaper">
-                    <img src="https://github.com/AryanMewada/AWW/raw/main/Earth.gif" alt="3D Earth">
-                    <div class="rec-info">
-                        <h4>3D Interactive Earth</h4>
-                        <p>Planet / 3D Model</p>
-                    </div>
-                </a>
+
             </div>
         </section>
 
@@ -371,6 +391,9 @@
             downloadBtn.addEventListener("click", (e) => {
                 const href = downloadBtn.getAttribute("href");
                 
+                // Check if user is navigating away naturally, if so prevent default to show processing state.
+                e.preventDefault();
+
                 // Visual feedback during processing
                 downloadBtn.innerHTML = "Processing...";
                 downloadBtn.style.opacity = "0.8";
@@ -384,6 +407,9 @@
                         }
                     })
                     .finally(() => {
+                        // Redirect to the actual download link
+                        window.location.href = href;
+
                         // Restore button state after a delay
                         setTimeout(() => {
                             downloadBtn.innerHTML = originalBtnHtml;
