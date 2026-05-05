@@ -6,8 +6,8 @@
     
     <title>Free .aww Live Wallpapers Gallery | AnyWebWall by BSR Studios</title>
     
-    <meta name="description" content="Download free exclusive .aww live wallpapers for AnyWebWall. Get Matrix Rain, 3D Earth, Hacker Window & more. Ultra-lightweight for low-end 2GB RAM PCs.">
-    <meta name="keywords" content="Download .aww files, Free Live Wallpapers, Matrix Rain Wallpaper Download, Hacker Window Wallpaper, Digital Clock Live Wallpaper, 3D Earth Live Wallpaper, aww file download for pc, anywebwall files download, low end pc live wallpaper">
+    <meta name="description" content="Download free exclusive .aww live wallpapers for AnyWebWall. Get Infinite Zoom, City 3D, Parallax Ocean & more. Ultra-lightweight for low-end 2GB RAM PCs.">
+    <meta name="keywords" content="Download .aww files, Free Live Wallpapers, Matrix Rain Wallpaper Download, Hacker Window Wallpaper, City 3D, Infinite Zoom, Parallax Live Wallpaper, aww file download for pc, anywebwall files download, low end pc live wallpaper">
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow">
 
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anywebwall.github.io/wallpapers/">
     <meta property="og:title" content="Free .aww Live Wallpapers Collection - AnyWebWall">
-    <meta property="og:description" content="Get the best lightweight live wallpapers: Matrix Rain, Hacker Window, and more. No lag, 100% free.">
+    <meta property="og:description" content="Get the best lightweight live wallpapers: Infinite Zoom, City 3D, and more. No lag, 100% free.">
     <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
     
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
@@ -86,7 +86,9 @@
         }
         .wall-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 15px 40px rgba(79, 70, 229, 0.15); }
 
-        .wall-thumb { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border); background: var(--surface-light); }
+        /* CSS Updated to Support Videos properly */
+        .wall-thumb { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border); background: var(--surface-light); display: block; }
+        video.wall-thumb { object-fit: contain; background: #0b1120; } /* Ensures 1366x768 videos don't get cropped */
         
         .wall-info { padding: 25px; display: flex; flex-direction: column; flex: 1; }
         .wall-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 15px; }
@@ -153,6 +155,67 @@
         
         <div class="gallery-grid">
             
+            <!-- NEW: Infinite Zoom -->
+            <a href="infinite-zoom/" class="wall-card">
+                <video autoplay loop muted playsinline class="wall-thumb">
+                    <source src="https://github.com/AryanMewada/AWW/raw/main/infinite-zoom.mp4" type="video/mp4">
+                </video>
+                <div class="wall-info">
+                    <h2 class="wall-title">Infinite Zoom Loop</h2>
+                    <div class="wall-meta">
+                        <span class="wall-type">Abstract / Illusion</span>
+                        <div class="dl-badge">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count" data-id="infinite_zoom">...</span>
+                        </div>
+                    </div>
+                    <span class="btn-view">View Details</span>
+                </div>
+            </a>
+
+            <!-- NEW: City 3D Neon Drive -->
+            <a href="city-3d/" class="wall-card">
+                <video autoplay loop muted playsinline class="wall-thumb">
+                    <source src="https://github.com/AryanMewada/AWW/raw/main/city_3d.mp4" type="video/mp4">
+                </video>
+                <div class="wall-info">
+                    <h2 class="wall-title">City 3D Neon Drive</h2>
+                    <div class="wall-meta">
+                        <span class="wall-type">3D Environment</span>
+                        <div class="dl-badge">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count" data-id="city_3d">...</span>
+                        </div>
+                    </div>
+                    <span class="btn-view">View Details</span>
+                </div>
+            </a>
+
+            <!-- NEW: Parallax 3D Ocean -->
+            <a href="parallax-3d/" class="wall-card">
+                <video autoplay loop muted playsinline class="wall-thumb">
+                    <source src="https://github.com/AryanMewada/AWW/raw/main/Parallax-3D.mp4" type="video/mp4">
+                </video>
+                <div class="wall-info">
+                    <h2 class="wall-title">Parallax 3D Ocean</h2>
+                    <div class="wall-meta">
+                        <span class="wall-type">Nature / Parallax</span>
+                        <div class="dl-badge">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count" data-id="parallax_3d">...</span>
+                        </div>
+                    </div>
+                    <span class="btn-view">View Details</span>
+                </div>
+            </a>
+
+            <!-- NATIVE BANNER AD dynamically loaded from root file -->
+            <div class="bsr-ad-wrapper" style="grid-column: 1 / -1; margin: 10px auto;">
+                <span class="ad-label">Sponsored Content</span>
+                <script src="../nativebanner.js"></script>
+            </div>
+
+            <!-- Existing Content -->
             <a href="hacker-window/" class="wall-card">
                 <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" alt="Hacker Window Preview" class="wall-thumb" loading="lazy">
                 <div class="wall-info">
@@ -197,12 +260,6 @@
                     <span class="btn-view">View Details</span>
                 </div>
             </a>
-
-            <!-- NATIVE BANNER AD dynamically loaded from root file -->
-            <div class="bsr-ad-wrapper" style="grid-column: 1 / -1; margin: 10px auto;">
-                <span class="ad-label">Sponsored Content</span>
-                <script src="../nativebanner.js"></script>
-            </div>
 
             <a href="rubiks-cube/" class="wall-card">
                 <img src="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.gif" alt="Rubik's Cube Preview" class="wall-thumb" loading="lazy">
