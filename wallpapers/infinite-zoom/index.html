@@ -11,18 +11,27 @@
     <meta name="description" content="Download the mesmerizing Infinite Zoom interactive live wallpaper. Experience a seamless 46-image endless zoom loop, highly optimized for Windows PC.">
     <meta name="keywords" content="infinite zoom wallpaper, zoomquilt live wallpaper, endless zoom background, picture in picture zoom, interactive desktop wallpaper, AnyWebWall abstract theme, download .aww files, pc live wallpaper, optimized animated background">
     <meta name="author" content="BSR Studios">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large">
 
+    <!-- Social & Search Engine Meta Tags (Using Static thumb.png for High CTR) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anywebwall.github.io/wallpapers/infinite-zoom/">
     <meta property="og:title" content="Infinite Zoom Live Wallpaper - Seamless Endless Journey">
     <meta property="og:description" content="Experience a mind-bending, glitch-free endless zoom on your desktop. Highly optimized for smooth performance.">
-    <meta property="og:image" content="https://github.com/AryanMewada/AWW/raw/main/Infinite%20Zoom.gif">
+    <meta property="og:image" content="https://anywebwall.github.io/wallpapers/infinite-zoom/thumb.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://anywebwall.github.io/wallpapers/infinite-zoom/">
+    <meta name="twitter:title" content="Infinite Zoom Live Wallpaper - Seamless Endless Journey">
+    <meta name="twitter:description" content="Experience a mind-bending, glitch-free endless zoom on your desktop. Highly optimized for smooth performance.">
+    <meta name="twitter:image" content="https://anywebwall.github.io/wallpapers/infinite-zoom/thumb.png">
     
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Schema Markup for Google Rich Snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,7 +45,7 @@
         "name": "BSR Studios",
         "url": "https://bsr-studios.github.io/"
       },
-      "image": "https://github.com/AryanMewada/AWW/raw/main/Infinite%20Zoom.gif",
+      "image": "https://anywebwall.github.io/wallpapers/infinite-zoom/thumb.png",
       "offers": {
         "@type": "Offer",
         "price": "0.00",
@@ -94,9 +103,9 @@
         .seo-paragraph strong { color: white; }
 
         /* General Broad SEO Article (Bottom) */
-        .broad-seo-article { background: linear-gradient(to bottom right, var(--surface), var(--surface-light)); padding: 50px; border-radius: 20px; border: 1px solid rgba(79, 70, 229, 0.3); margin-top: 50px; margin-bottom: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+        .broad-seo-article { background: linear-gradient(to bottom right, var(--surface), var(--surface-light)); padding: 50px; border-radius: 20px; border: 1px solid rgba(168, 85, 247, 0.3); margin-top: 50px; margin-bottom: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
         .broad-seo-article h2 { font-size: 2rem; margin-bottom: 25px; color: white; }
-        .broad-seo-article h3 { font-size: 1.4rem; margin-top: 35px; margin-bottom: 15px; color: var(--primary); }
+        .broad-seo-article h3 { font-size: 1.4rem; margin-top: 35px; margin-bottom: 15px; color: var(--neon-accent); }
         .broad-seo-article p { color: var(--text-muted); margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; }
         .broad-seo-article ul { margin-left: 20px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;}
         .broad-seo-article li { margin-bottom: 10px; }
@@ -128,6 +137,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
         .main-gif-card img { 
+            /* Frontend visual keeps using the GIF */
             width: 100%; height: 240px; 
             background-color: #0b1120;
             object-fit: cover; 
