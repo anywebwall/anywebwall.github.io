@@ -13,7 +13,7 @@
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow, max-image-preview:large">
 
-    <!-- Social & Search Engine Meta Tags (Using Static thumb.png for High CTR) -->
+    <!-- Social & Search Engine Meta Tags (Using Static thumb.jpg for High CTR) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anywebwall.github.io/wallpapers/infinite-zoom/">
     <meta property="og:title" content="Infinite Zoom Live Wallpaper - Seamless Endless Journey">
@@ -25,7 +25,7 @@
     <meta name="twitter:url" content="https://anywebwall.github.io/wallpapers/infinite-zoom/">
     <meta name="twitter:title" content="Infinite Zoom Live Wallpaper - Seamless Endless Journey">
     <meta name="twitter:description" content="Experience a mind-bending, glitch-free endless zoom on your desktop. Highly optimized for smooth performance.">
-    <meta name="twitter:image" content="https://anywebwall.github.io/wallpapers/infinite-zoom/thumb.png">
+    <meta name="twitter:image" content="https://anywebwall.github.io/wallpapers/infinite-zoom/thumb.jpg">
     
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
     
@@ -45,7 +45,7 @@
         "name": "BSR Studios",
         "url": "https://bsr-studios.github.io/"
       },
-      "image": "https://anywebwall.github.io/wallpapers/infinite-zoom/thumb.png",
+      "image": "https://anywebwall.github.io/wallpapers/infinite-zoom/thumb.jpg",
       "offers": {
         "@type": "Offer",
         "price": "0.00",
@@ -136,14 +136,18 @@
             border: 1px solid var(--border); 
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .main-gif-card img { 
-            /* Frontend visual keeps using the GIF */
-            width: 100%; height: 240px; 
+        
+        /* NEW CSS TO PREVENT CROPPING FOR 1366x768 VIDEOS */
+        .main-gif-card video { 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 16 / 9;
             background-color: #0b1120;
-            object-fit: cover; 
+            object-fit: contain; /* ensures the full width/height is visible */
             display: block; 
             border-bottom: 1px solid var(--border); 
         }
+
         .main-gif-info { padding: 25px; text-align: center; }
         .main-gif-info h2 { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px; }
         .main-gif-info p { color: var(--neon-accent); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
@@ -251,7 +255,10 @@
         <div id="download-zone" class="wallpaper-layout">
             
             <div class="main-gif-card">
-                <img src="https://github.com/AryanMewada/AWW/raw/main/Infinite%20Zoom.gif" alt="Infinite Zoom Seamless Loop Preview">
+                <!-- Using Video Tag with GitHub RAW URL to prevent cropping -->
+                <video autoplay loop muted playsinline>
+                    <source src="https://github.com/AryanMewada/AWW/raw/main/infinite-zoom.mp4" type="video/mp4">
+                </video>
                 <div class="main-gif-info">
                     <h2>Infinite Zoom Loop</h2>
                     <p>Abstract / Optical Illusion</p>
@@ -268,7 +275,8 @@
                 </ul>
                 
                 <div class="download-container">
-                    <a href="https://github.com/AryanMewada/AWW/raw/main/infinite_zoom.aww" id="downloadBtn" class="btn-download">
+                    <!-- Download link using GitHub RAW URL -->
+                    <a href="https://github.com/AryanMewada/AWW/raw/main/infinite-zoom.aww" id="downloadBtn" class="btn-download">
                         <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         Download .aww File
                     </a>
