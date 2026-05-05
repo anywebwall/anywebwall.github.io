@@ -9,11 +9,32 @@
   </url>
   <url>
     <loc>https://anywebwall.github.io/wallpapers/</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
+  <!-- New Wallpapers -->
+  <url>
+    <loc>https://anywebwall.github.io/wallpapers/infinite-zoom/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://anywebwall.github.io/wallpapers/city-3d/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://anywebwall.github.io/wallpapers/parallax-3d/</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Existing Wallpapers -->
   <url>
     <loc>https://anywebwall.github.io/wallpapers/hacker-window/</loc>
     <lastmod>2026-04-10</lastmod>
@@ -57,6 +78,7 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- Info Pages -->
   <url>
     <loc>https://anywebwall.github.io/info/about/</loc>
     <lastmod>2026-04-10</lastmod>
