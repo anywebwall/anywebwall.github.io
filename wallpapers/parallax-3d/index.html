@@ -11,18 +11,27 @@
     <meta name="description" content="Download the Parallax 3D interactive live wallpaper. Experience stunning multi-layered depth with ocean waves, a lighthouse, and mountains on your PC.">
     <meta name="keywords" content="parallax 3d wallpaper, ocean live background, lighthouse interactive wallpaper, multi layered 3d desktop, AnyWebWall parallax files, mouse tracking depth wallpaper, pc live wallpaper, optimized animated background">
     <meta name="author" content="BSR Studios">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large">
 
+    <!-- Social & Search Engine Meta Tags (Using Static thumb.png for High CTR) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anywebwall.github.io/wallpapers/parallax-3d/">
     <meta property="og:title" content="Parallax 3D Live Wallpaper - Immersive Ocean Depth">
     <meta property="og:description" content="Bring your desktop to life with a multi-layered parallax ocean scene. Moving clouds, waves, and a lighthouse.">
-    <meta property="og:image" content="https://github.com/AryanMewada/AWW/raw/main/Parallax%203D.gif">
+    <meta property="og:image" content="https://anywebwall.github.io/wallpapers/parallax-3d/thumb.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://anywebwall.github.io/wallpapers/parallax-3d/">
+    <meta name="twitter:title" content="Parallax 3D Live Wallpaper - Immersive Ocean Depth">
+    <meta name="twitter:description" content="Bring your desktop to life with a multi-layered parallax ocean scene. Moving clouds, waves, and a lighthouse.">
+    <meta name="twitter:image" content="https://anywebwall.github.io/wallpapers/parallax-3d/thumb.png">
     
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Schema Markup for Google Rich Snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,7 +45,7 @@
         "name": "BSR Studios",
         "url": "https://bsr-studios.github.io/"
       },
-      "image": "https://github.com/AryanMewada/AWW/raw/main/Parallax%203D.gif",
+      "image": "https://anywebwall.github.io/wallpapers/parallax-3d/thumb.png",
       "offers": {
         "@type": "Offer",
         "price": "0.00",
@@ -122,6 +131,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
         .main-gif-card img { 
+            /* Here we keep the GIF for the user preview */
             width: 100%; height: 240px; 
             background-color: #0b1120;
             object-fit: cover; 
@@ -230,6 +240,7 @@
         <div id="download-zone" class="wallpaper-layout">
             
             <div class="main-gif-card">
+                <!-- User sees the animated GIF preview here -->
                 <img src="https://github.com/AryanMewada/AWW/raw/main/Parallax%203D.gif" alt="Parallax 3D Ocean Live Preview">
                 <div class="main-gif-info">
                     <h2>Parallax 3D Ocean</h2>
