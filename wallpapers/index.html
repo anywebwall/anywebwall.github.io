@@ -6,8 +6,8 @@
     
     <title>Free .aww Live Wallpapers Gallery | AnyWebWall by BSR Studios</title>
     
-    <meta name="description" content="Download free exclusive .aww live wallpapers for AnyWebWall. Get Infinite Zoom, City 3D, Parallax Ocean & more. Ultra-lightweight for low-end 2GB RAM PCs.">
-    <meta name="keywords" content="Download .aww files, Free Live Wallpapers, Matrix Rain Wallpaper Download, Hacker Window Wallpaper, City 3D, Infinite Zoom, Parallax Live Wallpaper, aww file download for pc, anywebwall files download, low end pc live wallpaper">
+    <meta name="description" content="Download free exclusive .aww live wallpapers for AnyWebWall. Get Clock, Parallax Forest, City 3D & more. Ultra-lightweight for low-end 2GB RAM PCs.">
+    <meta name="keywords" content="Download .aww files, Free Live Wallpapers, Interactive Clock, Parallax Forest, City 3D, Infinite Zoom, aww file download for pc, anywebwall files download, low end pc live wallpaper">
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow">
 
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anywebwall.github.io/wallpapers/">
     <meta property="og:title" content="Free .aww Live Wallpapers Collection - AnyWebWall">
-    <meta property="og:description" content="Get the best lightweight live wallpapers: Infinite Zoom, City 3D, and more. No lag, 100% free.">
+    <meta property="og:description" content="Get the best lightweight live wallpapers: Real-Time Clock, Parallax Forest, and more. No lag, 100% free.">
     <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
     
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
@@ -86,9 +86,9 @@
         }
         .wall-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 15px 40px rgba(79, 70, 229, 0.15); }
 
-        /* CSS Updated to Support Videos properly */
+        /* Video Support CSS */
         .wall-thumb { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border); background: var(--surface-light); display: block; }
-        video.wall-thumb { object-fit: contain; background: #0b1120; } /* Ensures 1366x768 videos don't get cropped */
+        video.wall-thumb { object-fit: contain; background: #0b1120; } 
         
         .wall-info { padding: 25px; display: flex; flex-direction: column; flex: 1; }
         .wall-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 15px; }
@@ -155,7 +155,43 @@
         
         <div class="gallery-grid">
             
-            <!-- NEW: Infinite Zoom -->
+            <!-- NEW: Interactive Clock -->
+            <a href="clock/" class="wall-card">
+                <video autoplay loop muted playsinline class="wall-thumb">
+                    <source src="https://github.com/AryanMewada/AWW/raw/main/clock.mp4" type="video/mp4">
+                </video>
+                <div class="wall-info">
+                    <h2 class="wall-title">Interactive Real-Time Clock</h2>
+                    <div class="wall-meta">
+                        <span class="wall-type">Functional / Widget</span>
+                        <div class="dl-badge">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count" data-id="clock">...</span>
+                        </div>
+                    </div>
+                    <span class="btn-view">View Details</span>
+                </div>
+            </a>
+
+            <!-- NEW: Parallax Forest -->
+            <a href="parallax-forest/" class="wall-card">
+                <video autoplay loop muted playsinline class="wall-thumb">
+                    <source src="https://github.com/AryanMewada/AWW/raw/main/parallax-forest.mp4" type="video/mp4">
+                </video>
+                <div class="wall-info">
+                    <h2 class="wall-title">Parallax Forest Side-Scroller</h2>
+                    <div class="wall-meta">
+                        <span class="wall-type">Interactive / Physics</span>
+                        <div class="dl-badge">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count" data-id="parallax_forest">...</span>
+                        </div>
+                    </div>
+                    <span class="btn-view">View Details</span>
+                </div>
+            </a>
+
+            <!-- Existing: Infinite Zoom -->
             <a href="infinite-zoom/" class="wall-card">
                 <video autoplay loop muted playsinline class="wall-thumb">
                     <source src="https://github.com/AryanMewada/AWW/raw/main/infinite-zoom.mp4" type="video/mp4">
@@ -173,7 +209,13 @@
                 </div>
             </a>
 
-            <!-- NEW: City 3D Neon Drive -->
+            <!-- NATIVE BANNER AD dynamically loaded from root file -->
+            <div class="bsr-ad-wrapper" style="grid-column: 1 / -1; margin: 10px auto;">
+                <span class="ad-label">Sponsored Content</span>
+                <script src="../nativebanner.js"></script>
+            </div>
+
+            <!-- Existing: City 3D Neon Drive -->
             <a href="city-3d/" class="wall-card">
                 <video autoplay loop muted playsinline class="wall-thumb">
                     <source src="https://github.com/AryanMewada/AWW/raw/main/city_3d.mp4" type="video/mp4">
@@ -191,7 +233,7 @@
                 </div>
             </a>
 
-            <!-- NEW: Parallax 3D Ocean -->
+            <!-- Existing: Parallax 3D Ocean -->
             <a href="parallax-3d/" class="wall-card">
                 <video autoplay loop muted playsinline class="wall-thumb">
                     <source src="https://github.com/AryanMewada/AWW/raw/main/Parallax-3D.mp4" type="video/mp4">
@@ -209,13 +251,7 @@
                 </div>
             </a>
 
-            <!-- NATIVE BANNER AD dynamically loaded from root file -->
-            <div class="bsr-ad-wrapper" style="grid-column: 1 / -1; margin: 10px auto;">
-                <span class="ad-label">Sponsored Content</span>
-                <script src="../nativebanner.js"></script>
-            </div>
-
-            <!-- Existing Content -->
+            <!-- Existing: Hacker Window -->
             <a href="hacker-window/" class="wall-card">
                 <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" alt="Hacker Window Preview" class="wall-thumb" loading="lazy">
                 <div class="wall-info">
